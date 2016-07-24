@@ -15,6 +15,10 @@ Li-Wen Hsu &lt;lwhsu@FreeBSD.org&gt;
 
 https://en.wikipedia.org/wiki/FreeBSD_Ports
 
+- Jordan Hubbard committed his port make macros to the FreeBSD CVS repository on August 21, 1994.
+  * https://svnweb.freebsd.org/changeset/ports/5
+  * https://svnweb.freebsd.org/ports/head/Mk/bsd.port.mk?revision=5&view=markup&pathrev=5#l28
+
 - Src people make FreeBSD, ports pople make FreeBSD useful
 
 ---
@@ -35,7 +39,17 @@ https://www.freebsd.org/doc/en_US.ISO8859-1/books/porters-handbook/
 # Quick Porting
 
 ---
+# Ports Makfile targets
+
+---
+# Testing
+
+---
 # Staging
+
+---
+# handy pkg commands
+- pkg version -t
 
 ---
 # Utilities
