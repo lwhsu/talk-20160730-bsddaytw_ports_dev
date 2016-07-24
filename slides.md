@@ -6,7 +6,16 @@ class: center, middle
 Li-Wen Hsu &lt;lwhsu@FreeBSD.org&gt;
 
 ---
+# Package management
+
+- Install 3rd party softwares
+
+---
 # About FreeBSD Ports
+
+https://en.wikipedia.org/wiki/FreeBSD_Ports
+
+- Src people make FreeBSD, ports pople make FreeBSD useful
 
 ---
 # About FreeBSD Package
@@ -14,6 +23,8 @@ Li-Wen Hsu &lt;lwhsu@FreeBSD.org&gt;
 - Package
 - Pkgng
 - Pkg
+
+https://man.FreeBSD.org/pkg
 
 ---
 # Porter's Handbook
