@@ -147,7 +147,57 @@ lib/X11/oneko/mouse.xpm
 - `make makesum`
 
 ---
-# Ports Makfile targets
+# Behind `make all install`
+
+- Default sequence for "all" target:
+  * check-sanity fetch checksum extract patch configure build
+- install
+
+---
+# In each target
+
+- pre-*
+- do-*
+- post-*
+
+---
+# fetch
+
+---
+# extract
+
+- EXTRACT_CMD
+
+---
+# patch
+
+- EXTRA_PATCHES
+
+- external patch
+
+---
+# configure
+
+- HAS_CONFIGURE
+- GNU_CONFIGURE
+- CONFIGURE_SCRIPT
+- CONFIGURE_ARGS
+- CONFIGURE_ENV
+
+---
+# build & install
+
+- ALL_TARGET
+- MAKE_JOBS_UNSAFE
+
+- INSTALL_TARGET
+
+---
+# Test
+
+Not executed by default
+
+- TEST_TARGET
 
 ---
 # UID/GID
