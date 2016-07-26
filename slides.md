@@ -41,6 +41,15 @@ https://man.FreeBSD.org/pkg
 https://www.freebsd.org/doc/en_US.ISO8859-1/books/porters-handbook/
 
 ---
+# A port
+
+- Makefile
+- distinfo
+- files/
+- pkg-descr
+- pkg-plist
+
+---
 # Become a ports developer!
 
 ````sh
@@ -58,6 +67,58 @@ echo DEVELOPER=yes >> /etc/make.conf
 - Submitting the New Port
 
 ---
+# Makefile
+
+```Makefile
+# $FreeBSD$
+
+PORTNAME=       oneko
+PORTVERSION=    1.1b
+CATEGORIES=     games
+MASTER_SITES=   ftp://ftp.cs.columbia.edu/archives/X11R5/contrib/
+
+MAINTAINER=     youremail@example.com
+COMMENT=        Cat chasing a mouse all over the screen
+
+.include <bsd.port.mk>
+```
+
+(Using space for formatting, but port Makefile should use tab with 8 as width)
+
+.right[![onko](oneko.png)]
+
+---
+# pkg-descr
+
+```
+This is a port of oneko, in which a cat chases a poor mouse all over
+the screen.
+ :
+(etc.)
+
+WWW: http://www.oneko.org/
+```
+
+---
+# pkg-plist
+
+```
+bin/oneko
+man/man1/oneko.1.gz
+lib/X11/app-defaults/Oneko
+lib/X11/oneko/cat1.xpm
+lib/X11/oneko/cat2.xpm
+lib/X11/oneko/mouse.xpm
+```
+
+- `PLIST_FILES=` in `Makefile`
+- Sorting
+   * file `sort`
+   * directory `sort -r`
+- `make makeplist`
+
+
+---
 # Ports Makfile targets
 
 ---
@@ -72,8 +133,17 @@ echo DEVELOPER=yes >> /etc/make.conf
 ---
 # USE
 
+--
+# SUB
+
+---
+# USE_GITHUB
+
 ---
 # License
+
+---
+# OPTIONS
 
 ---
 # handy pkg commands
@@ -115,6 +185,9 @@ echo DEVELOPER=yes >> /etc/make.conf
 - http://portscout.FreeBSD.org/
 
 - Redports
+
+---
+# Best Practices
 
 ---
 # References
