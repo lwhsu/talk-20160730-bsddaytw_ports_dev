@@ -159,6 +159,17 @@ lib/X11/oneko/mouse.xpm
 # OPTIONS
 
 ---
+# BROKEN
+
+---
+# Other files under ports/
+
+- CHANGES
+- LEGAL
+- MOVED
+- UPDATING
+
+---
 # handy pkg commands
 - make -V
 - pkg version -t
