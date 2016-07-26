@@ -66,6 +66,20 @@ https://www.freebsd.org/doc/en_US.ISO8859-1/books/porters-handbook/
 - Patch
 
 ---
+# Special port type
+
+- slave port
+- meta port
+
+---
+# Language specific ports
+
+- Perl
+- Python
+- Ruby
+- Haskell
+
+---
 # FreeBSD.org web services
 
 - https://bugs.FreeBSD.org
