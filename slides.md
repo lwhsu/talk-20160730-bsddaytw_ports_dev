@@ -117,6 +117,10 @@ lib/X11/oneko/mouse.xpm
    * directory `sort -r`
 - `make makeplist`
 
+---
+# Checksum File
+
+- `make makesum`
 
 ---
 # Ports Makfile targets
@@ -137,6 +141,15 @@ lib/X11/oneko/mouse.xpm
 # SUB
 
 ---
+# Master Sites
+
+- MASTER_SITES
+- MASTER_SITE_SUBDIR
+
+- bsd.sites.mk
+- ---
+
+---
 # USE_GITHUB
 
 ---
@@ -147,6 +160,7 @@ lib/X11/oneko/mouse.xpm
 
 ---
 # handy pkg commands
+- make -V
 - pkg version -t
 
 ---
