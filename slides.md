@@ -211,6 +211,29 @@ lib/X11/oneko/mouse.xpm
   * Default: ${LINUXBASE} if USE_LINUX_PREFIX is set, otherwise ${LOCALBASE}
 
 ---
+# INSTALL_* & COPYTREE_*
+
+- INSTALL_PROGRAM
+- INSTALL_KLD
+- INSTALL_LIB
+- INSTALL_SCRIPT
+- INSTALL_DATA
+- INSTALL_MAN
+
+- COPYTREE_BIN
+- COPYTREE_SHARE
+
+---
+# Doc & Examples & Data
+
+- PORTDOCS
+  * DOCSDIR
+- PORTEXAMPLES
+  * EXAMPLESDIR
+- PORTDATA
+  * DATADIR
+
+---
 # handy pkg commands
 - make -V
 - pkg version -t
