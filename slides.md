@@ -6,6 +6,11 @@ class: center, middle
 Li-Wen Hsu &lt;lwhsu@FreeBSD.org&gt;
 
 ---
+![https://lwhsu.github.io/talk-20160730-bsddaytw_ports_dev/](url-qrcode.png)
+
+.footnote[https://lwhsu.github.io/talk-20160730-bsddaytw_ports_dev/]
+
+---
 # Package management
 
 - Install 3rd party softwares
