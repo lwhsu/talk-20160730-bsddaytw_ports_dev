@@ -41,16 +41,39 @@ https://man.FreeBSD.org/pkg
 https://www.freebsd.org/doc/en_US.ISO8859-1/books/porters-handbook/
 
 ---
+# Become a ports developer!
+
+````sh
+echo DEVELOPER=yes >> /etc/make.conf
+````
+
+---
 # Quick Porting
+
+- Writing the Makefile
+- Writing the Description Files
+- Creating the Checksum File
+- Testing the Port
+- Checking the Port with portlint
+- Submitting the New Port
 
 ---
 # Ports Makfile targets
+
+---
+# UID/GID
 
 ---
 # Testing
 
 ---
 # Staging
+
+---
+# USE
+
+---
+# License
 
 ---
 # handy pkg commands
@@ -92,6 +115,12 @@ https://www.freebsd.org/doc/en_US.ISO8859-1/books/porters-handbook/
 - http://portscout.FreeBSD.org/
 
 - Redports
+
+---
+# References
+
+- Mk/bsd.pot.Mk
+  * https://svnweb.freebsd.org/ports/head/Mk/bsd.port.mk?view=markup
 
 ---
 # Possible target as 2016/07/30
