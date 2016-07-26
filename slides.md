@@ -147,7 +147,17 @@ lib/X11/oneko/mouse.xpm
 - MASTER_SITE_SUBDIR
 
 - bsd.sites.mk
-- ---
+
+---
+# *_DEPENDS
+
+- EXTRACT_DEPENDS
+- PATCH_DEPENDS
+- FETCH_DEPENDS
+- BUILD_DEPENDS
+- RUN_DEPENDS
+- LIB_DEPENDS
+- TEST_DEPENDS
 
 ---
 # USE_GITHUB
