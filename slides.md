@@ -41,7 +41,31 @@ https://man.FreeBSD.org/pkg
 https://www.freebsd.org/doc/en_US.ISO8859-1/books/porters-handbook/
 
 ---
-# A port
+# Ports Tree
+
+```
+$ ls /usr/ports
+.arcconfig       Templates/       devel/           mail/            shells/
+.gitattributes   Tools/           dns/             math/            sysutils/
+.gitignore       UIDs             editors/         misc/            textproc/
+.portsnap.INDEX  UPDATING         emulators/       multimedia/      ukrainian/
+CHANGES          accessibility/   finance/         net/             vietnamese/
+CONTRIBUTING.md  arabic/          french/          net-im/          www/
+COPYRIGHT        archivers/       ftp/             net-mgmt/        x11/
+GIDs             astro/           games/           net-p2p/         x11-clocks/
+INDEX-10         audio/           german/          news/            x11-drivers/
+INDEX-8          benchmarks/      graphics/        palm/            x11-fm/
+INDEX-9          biology/         hebrew/          polish/          x11-fonts/
+Keywords/        cad/             hungarian/       ports-mgmt/      x11-servers/
+LEGAL            chinese/         irc/             portuguese/      x11-themes/
+MOVED            comms/           japanese/        print/           x11-toolkits/
+Makefile         converters/      java/            russian/         x11-wm/
+Mk/              databases/       korean/          science/
+README           deskutils/       lang/            security/
+```
+
+---
+# A Port
 
 - Makefile
 - distinfo
@@ -50,7 +74,7 @@ https://www.freebsd.org/doc/en_US.ISO8859-1/books/porters-handbook/
 - pkg-plist
 
 ---
-# Become a ports developer!
+# Become a Ports Developer!
 
 ````sh
 echo DEVELOPER=yes >> /etc/make.conf
