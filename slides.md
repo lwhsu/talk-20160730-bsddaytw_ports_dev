@@ -144,14 +144,59 @@ lib/X11/oneko/mouse.xpm
 ---
 # Checksum File
 
+- `make fetch` (not necessary)
 - `make makesum`
+
+---
+# Testing the Port
+
+0. make stage
+0. make check-orphans
+0. make package
+0. make install
+0. make deinstall
+0. pkg add &lt;package-filename&gt;
+0. make package (as user)
+
+---
+# Checking the Port with portlint
+
+`portlint -abct`
+
+**Important**: Do not **blindly** follow the output of `portlint`. It is a static lint tool and sometimes gets things wrong.
+
+```
+$ cd /usr/ports/devel/jenkins && portlint -abct
+WARN: Makefile: possible use of absolute pathname "/var/log/jenkins.log".
+0 fatal errors and 1 warning found.
+```
+
+---
+# Submitting the New Port
+
+- shar
+```
+shar `find oneko` > oneko.shar
+```
+
+- https://bugs.freebsd.org/submit/
+  * "Ports & Packages"
+  * "Individual Port(s)"
+
+---
+# Wait...
+
+- Submit another patch!
+- Additional FreeBSD Contributors
+  * https://www.freebsd.org/doc/en_US.ISO8859-1/articles/contributors/contrib-additional.html
 
 ---
 # Behind `make all install`
 
 - Default sequence for "all" target:
   * check-sanity fetch checksum extract patch configure build
-- install
+- install depends:
+  * stage package install
 
 ---
 # In each target
@@ -351,6 +396,9 @@ Not executed by default
 
 ---
 # Best Practices
+
+- Dos and Don'ts
+    * https://www.freebsd.org/doc/en_US.ISO8859-1/books/porters-handbook/porting-dads.html
 
 ---
 # References
