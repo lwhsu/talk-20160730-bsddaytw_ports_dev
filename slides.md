@@ -149,6 +149,21 @@ lib/X11/oneko/mouse.xpm
 - bsd.sites.mk
 
 ---
+# *DIR
+
+- MASTERDIR
+- PORTSDIR
+- DISTDIR
+- WRKDIRPREFIX
+- WRKDIR
+- WRKSRC
+- PATCHDIR
+- SCRIPTDIR
+- FILESDIR
+- PKGDIR
+- SRC_BASE
+
+---
 # *_DEPENDS
 
 - EXTRACT_DEPENDS
@@ -158,6 +173,9 @@ lib/X11/oneko/mouse.xpm
 - RUN_DEPENDS
 - LIB_DEPENDS
 - TEST_DEPENDS
+
+---
+# CONFLICTS
 
 ---
 # USE_GITHUB
@@ -178,6 +196,19 @@ lib/X11/oneko/mouse.xpm
 - LEGAL
 - MOVED
 - UPDATING
+
+---
+# Paths
+
+- LOCALBASE
+  * Where ports install things
+  * Default: /usr/local
+- LINUXBASE
+  * Where Linux ports install things
+  * Default: `/compat/linux`
+- PREFIX
+  * Where *this* port installs its files.
+  * Default: ${LINUXBASE} if USE_LINUX_PREFIX is set, otherwise ${LOCALBASE}
 
 ---
 # handy pkg commands
