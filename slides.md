@@ -238,6 +238,13 @@ svn diff > port.diff
 
 https://svnweb.freebsd.org/ports/head/www/py-django/Makefile?view=markup
 
+- MASTER_SITES macros
+- PKGNAMEPREFIX
+- DISTNAME
+- DIST_SUBDIR
+
+- CONFLICTS
+
 ---
 # Behind `make all install`
 - Default sequence for `all` target:
@@ -399,8 +406,34 @@ ${REINPLACE_CMD} -e 's|-O3|${CXXFLAGS}|;s|g++|${CXX}|' Makefile
 ---
 # OPTIONS
 
-pre-&lt;target&gt;-&lt;option&gt;-on
-pre-patch-COMPRESSED_FOLDERS-on
+`make config`
+
+![options](options.png)
+
+---
+# OPTIONS (c.)
+
+### www/py-django
+
+https://svnweb.freebsd.org/ports/head/www/py-django/Makefile?view=markup
+
+- OPTIONS_DEFINE
+- OPTIONS_DEFAULT
+- OPTIONS_GROUP
+- [OPT]_DESC
+- [OPT]_\*_DEPENDS
+
+---
+# OPTIONS (c.)
+
+- `.include <bsd.port.options.mk>`
+
+- `TARGET-OPT-on` and `TARGET-OPT-off`
+  * `pre-patch-COMPRESSED_FOLDERS-on`
+
+- `.if ${PORT_OPTIONS:M[OPT]}`
+
+.footnote[https://www.freebsd.org/doc/en_US.ISO8859-1/books/porters-handbook/makefile-options.html]
 
 ---
 # RC script
