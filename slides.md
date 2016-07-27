@@ -31,9 +31,11 @@ https://en.wikipedia.org/wiki/FreeBSD_Ports
 ---
 # About FreeBSD Package
 
-- Package
-- Pkgng
-- Pkg
+### Package -&gt; Pkgng -&gt; Pkg
+
+- https://wiki.freebsd.org/pkgng
+- https://github.com/freebsd/pkg
+- https://pkg.FreeBSD.org
 
 ---
 # Porter's Handbook
