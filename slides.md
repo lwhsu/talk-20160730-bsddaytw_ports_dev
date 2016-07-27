@@ -401,7 +401,7 @@ ports-mgmt/poudriere
   * https://www.freebsd.org/doc/en_US.ISO8859-1/books/porters-handbook/porting-prefix.html
 
 ---
-# More advanced topics
+# Advanced topics
 
 ---
 # UID/GID
