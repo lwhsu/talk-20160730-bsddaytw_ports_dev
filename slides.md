@@ -194,10 +194,18 @@ shar `find oneko` > oneko.shar
 # Behind `make all install`
 - Default sequence for `all` target:
 
-  * check-sanity fetch checksum extract patch configure build
+  * check-sanity
+  * fetch
+  * checksum
+  * extract
+  * patch
+  * configure
+  * build
 
 - `install` depends:
-  * stage package install
+  * stage
+  * package
+  * install
 
 ---
 # In each target
@@ -205,6 +213,28 @@ shar `find oneko` > oneko.shar
 - pre-*
 - do-*
 - post-*
+
+Examples:
+- pre-configure:
+  ```
+  ${CHMOD} +x ${WRKSRC}/configure
+  ```
+- do-install:
+  ```
+  ${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME}.pl \
+	  ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
+  ```
+- post-extract:
+  ```
+  @${FIND} ${WRKSRC} -type f \( -name '*.bak' -or \
+	  -name '*.dll' -or -name '*.exe' \) -delete
+  ```
+
+---
+# More targets in `bsd.port.mk`
+
+Find "More standard targets start here."
+- pre-everything::
 
 ---
 # fetch
@@ -261,6 +291,18 @@ Not executed by default
 # SUB
 
 ---
+# Compiler and flags
+
+- CC
+- CFLAGS
+- CXX
+- CXXFLAGS
+
+```Makfile
+${REINPLACE_CMD} -e 's|-O3|${CXXFLAGS}|;s|g++|${CXX}|' Makefile
+```
+
+---
 # Master Sites
 
 - MASTER_SITES
@@ -277,6 +319,7 @@ Not executed by default
 - WRKDIRPREFIX
 - WRKDIR
 - WRKSRC
+  * *_WRKSRC
 - PATCHDIR
 - SCRIPTDIR
 - FILESDIR
@@ -305,6 +348,9 @@ Not executed by default
 
 ---
 # OPTIONS
+
+pre-&lt;target&gt;-&lt;option&gt;-on
+pre-patch-COMPRESSED_FOLDERS-on
 
 ---
 # BROKEN
@@ -401,6 +447,11 @@ Not executed by default
 
 - Dos and Don'ts
     * https://www.freebsd.org/doc/en_US.ISO8859-1/books/porters-handbook/porting-dads.html
+
+---
+# VuXML
+
+- http://www.vuxml.org/freebsd/ \
 
 ---
 # References
