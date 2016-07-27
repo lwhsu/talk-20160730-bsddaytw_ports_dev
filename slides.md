@@ -405,7 +405,7 @@ ${REINPLACE_CMD} -e 's|-O3|${CXXFLAGS}|;s|g++|${CXX}|' Makefile
 - MASTER_SITES
 - MASTER_SITE_SUBDIR
 
-- bsd.sites.mk
+- https://svnweb.freebsd.org/ports/head/Mk/bsd.sites.mk?view=markup
 
 ---
 # *DIR
@@ -426,6 +426,8 @@ ${REINPLACE_CMD} -e 's|-O3|${CXXFLAGS}|;s|g++|${CXX}|' Makefile
 ---
 # *_DEPENDS
 
+https://svnweb.freebsd.org/ports/head/devel/py-jenkins-job-builder/Makefile?revision=418472&view=markup#l16
+
 - EXTRACT_DEPENDS
 - PATCH_DEPENDS
 - FETCH_DEPENDS
@@ -437,11 +439,22 @@ ${REINPLACE_CMD} -e 's|-O3|${CXXFLAGS}|;s|g++|${CXX}|' Makefile
 ---
 # CONFLICTS
 
+Ports install files in the same place should be marked CONFLICTS
+
+https://svnweb.freebsd.org/ports/head/www/py-django/Makefile?revision=412351&view=markup#l24
+
 ---
 # USE_GITHUB
 
 ---
 # License
+
+https://svnweb.freebsd.org/ports/head/www/py-django/Makefile?revision=412351&view=markup#l16
+
+- https://svnweb.freebsd.org/ports/head/Mk/bsd.licenses.mk?view=markup
+- https://svnweb.freebsd.org/ports/head/Mk/bsd.licenses.db.mk?view=markup
+- EULA
+  * https://svnweb.freebsd.org/ports/head/net-p2p/btsync/Makefile?view=markup#l13
 
 ---
 # OPTIONS
@@ -484,6 +497,9 @@ https://svnweb.freebsd.org/ports/head/devel/jenkins/files/jenkins.in?view=markup
 
 ---
 # BROKEN
+
+- Fix ASAP
+- Really cannot fix, mark IGNORE
 
 ---
 # Other files under ports/
