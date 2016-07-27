@@ -208,9 +208,9 @@ shar `find oneko` > oneko.shar
   * install
 
 ---
-# In each target
+# Each standard target
 
-pre-\* do-\* post-\*
+### pre-\* do-\* post-\*
 
 Examples:
 - pre-configure:
