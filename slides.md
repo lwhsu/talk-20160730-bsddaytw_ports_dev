@@ -20,7 +20,7 @@ Li-Wen Hsu &lt;lwhsu@FreeBSD.org&gt;
 
 https://en.wikipedia.org/wiki/FreeBSD_Ports
 
-- Jordan Hubbard committed his port make macros to the FreeBSD CVS repository on August 21, 1994.
+- **Jordan Hubbard** committed his port make macros to the FreeBSD CVS repository on August 21, 1994.
   * https://svnweb.freebsd.org/changeset/ports/5
   * https://svnweb.freebsd.org/ports/head/Mk/bsd.port.mk?revision=5&view=markup&pathrev=5#l28
 
@@ -224,12 +224,19 @@ svn diff > port.diff
   * Test build log
 
 ---
-# Work with Committers and Contributors
+# Work with other Committers and Contributors
 
 - Timeout
 - When waiting respose, submit another patch!
 - Additional FreeBSD Contributors
   * https://www.freebsd.org/doc/en_US.ISO8859-1/articles/contributors/contrib-additional.html
+
+---
+# More complex example
+
+### www/py-django
+
+https://svnweb.freebsd.org/ports/head/www/py-django/Makefile?view=markup
 
 ---
 # Behind `make all install`
@@ -270,13 +277,9 @@ Examples:
   ```
 
 ---
-# More targets in `bsd.port.mk`
-
-Find "More standard targets start here."
-- pre-everything::
-
----
 # fetch
+
+- 
 
 ---
 # extract
@@ -308,11 +311,17 @@ Find "More standard targets start here."
 - INSTALL_TARGET
 
 ---
-# Test
+# test
 
 Not executed by default
 
 - TEST_TARGET
+
+---
+# More targets in `bsd.port.mk`
+
+Find "More standard targets start here."
+- pre-everything::
 
 ---
 # UID/GID
@@ -390,6 +399,13 @@ ${REINPLACE_CMD} -e 's|-O3|${CXXFLAGS}|;s|g++|${CXX}|' Makefile
 
 pre-&lt;target&gt;-&lt;option&gt;-on
 pre-patch-COMPRESSED_FOLDERS-on
+
+---
+# RC script
+
+https://svnweb.freebsd.org/ports/head/devel/jenkins/Makefile?view=markup
+
+https://svnweb.freebsd.org/ports/head/devel/jenkins/files/jenkins.in?view=markup
 
 ---
 # BROKEN
