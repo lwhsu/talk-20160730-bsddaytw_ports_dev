@@ -518,7 +518,7 @@ https://svnweb.freebsd.org/ports/head/www/py-django/Makefile?view=markup
 .footnote[https://www.freebsd.org/doc/en_US.ISO8859-1/books/porters-handbook/makefile-options.html]
 
 ---
-# RC script
+# RC Script
 
 `/usr/local/etc/rc.d`
 
