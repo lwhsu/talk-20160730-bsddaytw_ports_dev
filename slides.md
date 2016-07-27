@@ -247,6 +247,16 @@ https://svnweb.freebsd.org/ports/head/www/py-django/Makefile?view=markup
 
 - CONFLICTS
 
+.footnote[https://www.freebsd.org/doc/en_US.ISO8859-1/books/porters-handbook/makefiles.html]
+
+---
+# Name & Version
+
+- PORTNAME
+- PORTVERSION
+- PORTREVISION
+- PORTEPOCH
+
 ---
 # Behind `make all install`
 - Default sequence for `all` target:
