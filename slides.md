@@ -142,7 +142,7 @@ lib/X11/oneko/mouse.xpm
 - `make makeplist`
 
 ---
-# Checksum File
+# Checksum File (distinfo)
 
 - `make fetch`
 - `make makesum`
@@ -175,7 +175,6 @@ SIZE (oneko/oneko-2.0b-bsd0.2.tar.gz) = 22029
     * Important for package builders
 - `make package` can be run as a normal user (that is, not as root).
     * If that fails, `NEED_ROOT=yes` must be added to the port Makefile
-
 
 ---
 # Testing steps
@@ -226,10 +225,11 @@ svn diff > port.diff
 ---
 # Work with other Committers and Contributors
 
-- Timeout
 - When waiting respose, submit another patch!
 - Additional FreeBSD Contributors
   * https://www.freebsd.org/doc/en_US.ISO8859-1/articles/contributors/contrib-additional.html
+- Maintainer timeout
+- Maintainership takeove
 
 ---
 # More complex example
@@ -294,25 +294,37 @@ Examples:
 # extract
 
 - EXTRACT_CMD
+- USES=
+  * tar:bzip2
+  * tar:xz
+  * Affects EXTRACT_SUFX
 
 ---
 # patch
 
 - EXTRA_PATCHES
+  * https://svnweb.freebsd.org/ports/head/www/npm/Makefile?revision=415659&view=markup#l38
 
-- external patch
+- External patch
+  * https://svnweb.freebsd.org/ports/head/devel/cvs2svn/Makefile?revision=412627&view=markup#l11
+  * PATCHFILES
+  * PATCH_SITES
 
 ---
 # configure
 
-- HAS_CONFIGURE
-- GNU_CONFIGURE
-- CONFIGURE_SCRIPT
+https://svnweb.freebsd.org/ports/head/lang/python27/Makefile?revision=417945&view=markup#l17
+
 - CONFIGURE_ARGS
 - CONFIGURE_ENV
+- CONFIGURE_SCRIPT
+- HAS_CONFIGURE
+- GNU_CONFIGURE
 
 ---
 # build & install
+
+https://svnweb.freebsd.org/ports/head/devel/jenkins/Makefile?revision=419032&view=markup#l49
 
 - ALL_TARGET
 - MAKE_JOBS_UNSAFE
@@ -323,6 +335,8 @@ Examples:
 # test
 
 Not executed by default
+
+https://svnweb.freebsd.org/ports/head/www/lighttpd/Makefile?revision=418900&view=markup#l190
 
 - TEST_TARGET
 
@@ -335,17 +349,43 @@ Find "More standard targets start here."
 ---
 # UID/GID
 
+https://svnweb.freebsd.org/ports/head/devel/jenkins/Makefile?revision=419032&view=markup#l33
+
+- ports/UIDs
+- ports/GIDs 
+
+.footnote[https://www.freebsd.org/doc/en_US.ISO8859-1/books/porters-handbook/users-and-groups.html]
+
 ---
 # Testing
 
 ---
 # Staging
 
+https://svnweb.freebsd.org/ports/head/devel/jenkins/Makefile?revision=419032&view=markup#l49
+
+- https://www.freebsd.org/doc/en_US.ISO8859-1/books/porters-handbook/special.html#staging
+- https://wiki.freebsd.org/ports/StageDir
+
 ---
 # USE
 
+https://www.freebsd.org/doc/en_US.ISO8859-1/books/porters-handbook/uses.html#uses-intro
+
+- https://svnweb.freebsd.org/ports/head/Mk/Uses/
+- https://svnweb.freebsd.org/ports/head/Mk/Uses/compiler.mk?view=markup
+- https://svnweb.freebsd.org/ports/head/Mk/Uses/autoreconf.mk?view=markup
+
 --
 # SUB
+
+https://svnweb.freebsd.org/ports/head/devel/jenkins/Makefile?revision=419032&view=markup#l39
+
+- SUB_FILES
+- SUB_LIST
+- PLIST_SUB
+
+.footnote[https://www.freebsd.org/doc/en_US.ISO8859-1/books/porters-handbook/using-sub-files.html]
 
 ---
 # Compiler and flags
