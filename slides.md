@@ -476,7 +476,7 @@ Ports install files in the same place should be marked CONFLICTS
 https://svnweb.freebsd.org/ports/head/www/py-django/Makefile?revision=412351&view=markup#l24
 
 ---
-# License
+# LICENSE
 
 https://svnweb.freebsd.org/ports/head/www/py-django/Makefile?revision=412351&view=markup#l16
 
