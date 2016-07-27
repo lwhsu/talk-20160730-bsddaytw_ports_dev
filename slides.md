@@ -213,15 +213,21 @@ shar `find oneko` > oneko.shar
 ```
 svn diff > port.diff
 ```
-
+---
+# Bugzilla
 - https://bugs.freebsd.org/submit/
   * "Ports & Packages"
   * "Individual Port(s)"
+  * Prefix the issue **Summary** field with `category/port`
+      - so that MAINTAINER is Assigned or CC'd automatically.
+  * Add an attachment
+  * Test build log
 
 ---
-# Wait...
+# Work with Committers and Contributors
 
-- Submit another patch!
+- Timeout
+- When waiting respose, submit another patch!
 - Additional FreeBSD Contributors
   * https://www.freebsd.org/doc/en_US.ISO8859-1/articles/contributors/contrib-additional.html
 
