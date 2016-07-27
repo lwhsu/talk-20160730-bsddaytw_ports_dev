@@ -279,7 +279,9 @@ Examples:
 ---
 # fetch
 
-- 
+- Execute `fetch(1)`
+- fetch `${DISTNAME}${EXTRACT_SUFX}`
+- FETCH_ARGS
 
 ---
 # extract
