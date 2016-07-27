@@ -210,9 +210,7 @@ shar `find oneko` > oneko.shar
 ---
 # In each target
 
-- pre-*
-- do-*
-- post-*
+pre-\* do-\* post-\*
 
 Examples:
 - pre-configure:
