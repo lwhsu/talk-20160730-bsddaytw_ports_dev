@@ -324,6 +324,8 @@ Examples:
   * PATCHFILES
   * PATCH_SITES
 
+- `make makepatch`
+
 ---
 # configure
 
