@@ -452,6 +452,7 @@ ${REINPLACE_CMD} -e 's|-O3|${CXXFLAGS}|;s|g++|${CXX}|' Makefile
 - MASTER_SITE_SUBDIR
 
 - https://svnweb.freebsd.org/ports/head/Mk/bsd.sites.mk?view=markup
+- https://github.com/lwhsu/freebsd-ports-lang-julia/blob/master/Makefile
 
 ---
 # CONFLICTS
