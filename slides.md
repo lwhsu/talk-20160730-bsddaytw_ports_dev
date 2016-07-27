@@ -87,7 +87,7 @@ echo DEVELOPER=yes >> /etc/make.conf
 - Writing the Description Files
 - Creating the Checksum File
 - Testing the Port
-- Checking the Port with portlint
+- Checking with portlint
 - Submitting the New Port
 
 ---
@@ -189,11 +189,11 @@ SIZE (oneko/oneko-2.0b-bsd0.2.tar.gz) = 22029
 0. `make package (as user)`
 
 ---
-# Checking the Port with portlint
+# Checking with portlint
 
-`portlint -abct`
+### `$ portlint -abct`
 
-**Important**: Do not **blindly** follow the output of `portlint`. It is a static lint tool and sometimes gets things wrong.
+Do **not** **blindly** follow the output of `portlint`
 
 ```
 $ cd /usr/ports/devel/jenkins && portlint -abct
@@ -202,11 +202,16 @@ WARN: Makefile: possible use of absolute pathname "/var/log/jenkins.log".
 ```
 
 ---
-# Submitting the New Port
+# Submitting
 
-- shar
+### Now Port (use shar):
 ```
 shar `find oneko` > oneko.shar
+```
+
+### Updating (use patch):
+```
+svn diff > port.diff
 ```
 
 - https://bugs.freebsd.org/submit/
