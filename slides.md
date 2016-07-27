@@ -520,6 +520,8 @@ https://svnweb.freebsd.org/ports/head/www/py-django/Makefile?view=markup
 ---
 # RC script
 
+`/usr/local/etc/rc.d`
+
 - USE_RC_SUBR
   * https://svnweb.freebsd.org/ports/head/devel/jenkins/Makefile?view=markup
   * https://svnweb.freebsd.org/ports/head/devel/jenkins/files/jenkins.in?view=markup
