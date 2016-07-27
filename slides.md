@@ -392,11 +392,13 @@ ports-mgmt/poudriere
 - https://github.com/freebsd/poudriere/wiki
 - https://github.com/freebsd/poudriere/wiki/using_testport
 
----
-# Submit
+.footnote[https://www.freebsd.org/doc/en_US.ISO8859-1/books/porters-handbook/testing.html]
 
-- https://reviews.FreeBSD.org
-- https://wiki.freebsd.org/CodeReview
+---
+# More Tests
+
+- DESTDIR/PREFIX
+  * https://www.freebsd.org/doc/en_US.ISO8859-1/books/porters-handbook/porting-prefix.html
 
 ---
 # More advanced topics
@@ -578,6 +580,7 @@ https://svnweb.freebsd.org/ports/head/devel/jenkins/files/jenkins.in?view=markup
 
 ---
 # handy pkg commands
+
 - grep -r
 - make -V
 - pkg version -t
@@ -586,36 +589,37 @@ https://svnweb.freebsd.org/ports/head/devel/jenkins/files/jenkins.in?view=markup
 # Utilities
 
 - ports-mgmt/porttools
+  * https://github.com/skreuzer/porttools
+  * `port create``
 - ports-mgmt/portlint
-
-- bz
-
----
-# Submit your work
-
-- New porrt
-- Patch
+- ports-mgmt/freebsd-bugzilla-cli
 
 ---
 # Special port type
 
 - slave port
+  * https://svnweb.freebsd.org/ports/head/editors/vim-lite/Makefile?view=markup
 - meta port
+  * https://svnweb.freebsd.org/ports/head/net/kdenetwork4/Makefile?view=markup
 
 ---
 # Language specific ports
 
 - Perl
+  * p5-
 - Python
+  * py-
 - Ruby
-- Haskell
+  * ruby-
+- Java
+  * openjdk
 
 ---
 # FreeBSD.org web services
 
 - https://bugs.FreeBSD.org
 - https://reviews.FreeBSD.org
-- http://portscout.FreeBSD.org/
+- http://portscout.FreeBSD.org
 
 - Redports
 
