@@ -144,19 +144,49 @@ lib/X11/oneko/mouse.xpm
 ---
 # Checksum File
 
-- `make fetch` (not necessary)
+- `make fetch`
 - `make makesum`
 
----
-# Testing the Port
+```
+SHA256 (oneko/oneko-2.0b.tar.gz) = 6d106cd38134be5f5c483affe7fe3b64f8a92955e88097040472571a3f1deb46
+SIZE (oneko/oneko-2.0b.tar.gz) = 86353
+SHA256 (oneko/oneko-2.0b-pop1.1-patch.tar.gz) = 36cedd96d0219fb687fed0c34bbdf375833a3ce0f6d12220427fbc804b315681
+SIZE (oneko/oneko-2.0b-pop1.1-patch.tar.gz) = 17861
+SHA256 (oneko/oneko-2.0b-tip1.7.tar.gz) = 91896db954c7b18e63f913ef264adfb9f297763f0cb8c0c7dc832b701c808c13
+SIZE (oneko/oneko-2.0b-tip1.7.tar.gz) = 64251
+SHA256 (oneko/oneko-2.0b-sender0.5.tar.gz) = 2bd346b124812706b98481baea5b66a8e73added466a6880194bc52b20090113
+SIZE (oneko/oneko-2.0b-sender0.5.tar.gz) = 42944
+SHA256 (oneko/oneko-2.0b-bsd0.2.tar.gz) = 2c876387cb7d654bdd4bec5abb273dd98e35fe505bf169f92847f37fafe0d83e
+SIZE (oneko/oneko-2.0b-bsd0.2.tar.gz) = 22029
+```
 
-0. make stage
-0. make check-orphans
-0. make package
-0. make install
-0. make deinstall
-0. pkg add &lt;package-filename&gt;
-0. make package (as user)
+---
+# Check lists
+
+- Software works correctly
+- `pkg-plist`
+    * Does not contain anything not installed by the port.
+    * Contains everything that is installed by the port.
+- `make install`
+    * Verify the install script works correctly
+- `make deinstall`
+    * Verify the deinstall script works correctly
+- **Only** `make fetch` need to access network
+    * Important for package builders
+- `make package` can be run as a normal user (that is, not as root).
+    * If that fails, `NEED_ROOT=yes` must be added to the port Makefile
+
+
+---
+# Testing steps
+
+0. `make stage`
+0. `make check-orphans`
+0. `make package`
+0. `make install`
+0. `make deinstall`
+0. `pkg add <package-filename>`
+0. `make package (as user)`
 
 ---
 # Checking the Port with portlint
