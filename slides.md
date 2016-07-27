@@ -387,6 +387,10 @@ https://svnweb.freebsd.org/ports/head/devel/py-jenkins-job-builder/Makefile?revi
 - LIB_DEPENDS
 - TEST_DEPENDS
 
+https://svnweb.freebsd.org/ports/head/Mk/bsd.port.mk?view=markup
+
+"# Dependency checking.  Use these if your port requires another port"
+
 ---
 # Staging
 
@@ -541,20 +545,7 @@ https://svnweb.freebsd.org/ports/head/www/py-django/Makefile?view=markup
 - UPDATING
 
 ---
-# Paths
-
-- LOCALBASE
-  * Where ports install things
-  * Default: /usr/local
-- LINUXBASE
-  * Where Linux ports install things
-  * Default: `/compat/linux`
-- PREFIX
-  * Where *this* port installs its files.
-  * Default: ${LINUXBASE} if USE_LINUX_PREFIX is set, otherwise ${LOCALBASE}
-
----
-# INSTALL_* & COPYTREE_*
+# INSTALL\_\* & COPYTREE\_\*
 
 - INSTALL_PROGRAM
 - INSTALL_KLD
