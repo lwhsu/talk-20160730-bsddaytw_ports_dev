@@ -14,6 +14,8 @@ Li-Wen Hsu &lt;lwhsu@FreeBSD.org&gt;
 # Package management
 
 - Install 3rd party softwares
+- Dependency management
+- Cleanness of a system
 
 ---
 # About FreeBSD Ports
@@ -32,8 +34,6 @@ https://en.wikipedia.org/wiki/FreeBSD_Ports
 - Package
 - Pkgng
 - Pkg
-
-https://man.FreeBSD.org/pkg
 
 ---
 # Porter's Handbook
