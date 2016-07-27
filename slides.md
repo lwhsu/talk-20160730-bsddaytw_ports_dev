@@ -454,30 +454,11 @@ ${REINPLACE_CMD} -e 's|-O3|${CXXFLAGS}|;s|g++|${CXX}|' Makefile
 - https://svnweb.freebsd.org/ports/head/Mk/bsd.sites.mk?view=markup
 
 ---
-# *DIR
-
-- MASTERDIR
-- PORTSDIR
-- DISTDIR
-- WRKDIRPREFIX
-- WRKDIR
-- WRKSRC
-  * *_WRKSRC
-- PATCHDIR
-- SCRIPTDIR
-- FILESDIR
-- PKGDIR
-- SRC_BASE
-
----
 # CONFLICTS
 
 Ports install files in the same place should be marked CONFLICTS
 
 https://svnweb.freebsd.org/ports/head/www/py-django/Makefile?revision=412351&view=markup#l24
-
----
-# USE_GITHUB
 
 ---
 # License
@@ -571,6 +552,8 @@ https://svnweb.freebsd.org/ports/head/devel/jenkins/files/jenkins.in?view=markup
 ---
 # Doc & Examples & Data
 
+In `pkg-plist``
+
 - PORTDOCS
   * DOCSDIR
 - PORTEXAMPLES
@@ -578,8 +561,10 @@ https://svnweb.freebsd.org/ports/head/devel/jenkins/files/jenkins.in?view=markup
 - PORTDATA
   * DATADIR
 
+https://svnweb.freebsd.org/ports/head/devel/kyua/pkg-plist?view=markup#l20
+
 ---
-# handy pkg commands
+# Handy pkg commands
 
 - grep -r
 - make -V
@@ -615,6 +600,12 @@ https://svnweb.freebsd.org/ports/head/devel/jenkins/files/jenkins.in?view=markup
   * openjdk
 
 ---
+# Best Practices
+
+- Dos and Don'ts
+    * https://www.freebsd.org/doc/en_US.ISO8859-1/books/porters-handbook/porting-dads.html
+
+---
 # FreeBSD.org web services
 
 - https://bugs.FreeBSD.org
@@ -622,12 +613,6 @@ https://svnweb.freebsd.org/ports/head/devel/jenkins/files/jenkins.in?view=markup
 - http://portscout.FreeBSD.org
 
 - Redports
-
----
-# Best Practices
-
-- Dos and Don'ts
-    * https://www.freebsd.org/doc/en_US.ISO8859-1/books/porters-handbook/porting-dads.html
 
 ---
 # VuXML
