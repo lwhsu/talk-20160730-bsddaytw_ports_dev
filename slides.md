@@ -257,6 +257,8 @@ https://svnweb.freebsd.org/ports/head/www/py-django/Makefile?view=markup
 - PORTREVISION
 - PORTEPOCH
 
+.footnote[https://www.freebsd.org/doc/en_US.ISO8859-1/books/porters-handbook/makefile-naming.html]
+
 ---
 # Behind `make all install`
 - Default sequence for `all` target:
