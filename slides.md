@@ -567,7 +567,7 @@ https://svnweb.freebsd.org/ports/head/devel/jenkins/files/jenkins.in?view=markup
 ---
 # Doc & Examples & Data
 
-In `pkg-plist``
+In `pkg-plist`
 
 - PORTDOCS
   * DOCSDIR
