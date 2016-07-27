@@ -346,6 +346,61 @@ https://svnweb.freebsd.org/ports/head/www/lighttpd/Makefile?revision=418900&view
 Find "More standard targets start here."
 - pre-everything::
 
+```
+pre-everything::
+        @${ECHO_MSG}
+        @${ECHO_MSG} "To build Chromium, you should have around 2 GB of memory"
+.if ${PORT_OPTIONS:MDEBUG}
+        @${ECHO_MSG} "and lots of free diskspace (~ 8.5GB)."
+.else
+        @${ECHO_MSG} "and a fair amount of free diskspace (~ 3.7GB)."
+.endif
+        @${ECHO_MSG}
+        @${ECHO_MSG} "Make sure you have Python build with the SEM option ON"
+        @${ECHO_MSG} "(default in python27-2.7.8 since r361735)"
+```
+
+---
+# *_DEPENDS
+
+https://svnweb.freebsd.org/ports/head/devel/py-jenkins-job-builder/Makefile?revision=418472&view=markup#l16
+
+- EXTRACT_DEPENDS
+- PATCH_DEPENDS
+- FETCH_DEPENDS
+- BUILD_DEPENDS
+- RUN_DEPENDS
+- LIB_DEPENDS
+- TEST_DEPENDS
+
+---
+# Staging
+
+https://svnweb.freebsd.org/ports/head/devel/jenkins/Makefile?revision=419032&view=markup#l49
+
+- https://www.freebsd.org/doc/en_US.ISO8859-1/books/porters-handbook/special.html#staging
+- https://wiki.freebsd.org/ports/StageDir
+
+---
+# Testing
+
+ports-mgmt/poudriere
+
+`sudo poudriere testport -j 10_3_amd64 -o emulators/virtualbox-ose-lite`
+
+- https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=210046
+- https://github.com/freebsd/poudriere/wiki
+- https://github.com/freebsd/poudriere/wiki/using_testport
+
+---
+# Submit
+
+- https://reviews.FreeBSD.org
+- https://wiki.freebsd.org/CodeReview
+
+---
+# More advanced topics
+
 ---
 # UID/GID
 
@@ -355,17 +410,6 @@ https://svnweb.freebsd.org/ports/head/devel/jenkins/Makefile?revision=419032&vie
 - ports/GIDs 
 
 .footnote[https://www.freebsd.org/doc/en_US.ISO8859-1/books/porters-handbook/users-and-groups.html]
-
----
-# Testing
-
----
-# Staging
-
-https://svnweb.freebsd.org/ports/head/devel/jenkins/Makefile?revision=419032&view=markup#l49
-
-- https://www.freebsd.org/doc/en_US.ISO8859-1/books/porters-handbook/special.html#staging
-- https://wiki.freebsd.org/ports/StageDir
 
 ---
 # USE
@@ -422,19 +466,6 @@ ${REINPLACE_CMD} -e 's|-O3|${CXXFLAGS}|;s|g++|${CXX}|' Makefile
 - FILESDIR
 - PKGDIR
 - SRC_BASE
-
----
-# *_DEPENDS
-
-https://svnweb.freebsd.org/ports/head/devel/py-jenkins-job-builder/Makefile?revision=418472&view=markup#l16
-
-- EXTRACT_DEPENDS
-- PATCH_DEPENDS
-- FETCH_DEPENDS
-- BUILD_DEPENDS
-- RUN_DEPENDS
-- LIB_DEPENDS
-- TEST_DEPENDS
 
 ---
 # CONFLICTS
