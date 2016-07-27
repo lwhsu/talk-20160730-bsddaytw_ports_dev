@@ -192,10 +192,11 @@ shar `find oneko` > oneko.shar
 
 ---
 # Behind `make all install`
+- Default sequence for `all` target:
 
-- Default sequence for "all" target:
   * check-sanity fetch checksum extract patch configure build
-- install depends:
+
+- `install` depends:
   * stage package install
 
 ---
@@ -354,6 +355,7 @@ Not executed by default
 
 ---
 # handy pkg commands
+- grep -r
 - make -V
 - pkg version -t
 
