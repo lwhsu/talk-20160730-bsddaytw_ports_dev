@@ -47,9 +47,15 @@ echo DEVELOPER=yes >> /etc/make.conf
 ````
 
 ---
-# Porter's Handbook
+# Flow
 
-https://www.freebsd.org/doc/en_US.ISO8859-1/books/porters-handbook/
+1. Read Porter's Handbook
+  * https://www.freebsd.org/doc/en_US.ISO8859-1/books/porters-handbook/
+2. Submit patch
+3. If (have question), goto 1.
+4. Else goto 2.
+
+Exception handler: ask
 
 ---
 # Ports Tree
@@ -79,10 +85,15 @@ README           deskutils/       lang/            security/
 # A Port
 
 - Makefile
+   * Main makefile -- tell computer how to build and install the software
 - distinfo
+   * Checksum file -- verify the downloaded file
 - files/
+   * Patches an other files used
 - pkg-descr
+   * Dscription of the softwar
 - pkg-plist
+   * Packaging list
 
 ---
 # Quick Porting
