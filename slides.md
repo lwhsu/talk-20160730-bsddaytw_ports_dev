@@ -653,7 +653,7 @@ https://svnweb.freebsd.org/ports/head/devel/kyua/pkg-plist?view=markup#l20
 ---
 # VuXML
 
-- http://www.vuxml.org/freebsd/ \
+- http://www.vuxml.org/freebsd/
 
 ---
 # References
