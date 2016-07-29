@@ -637,3 +637,8 @@ https://svnweb.freebsd.org/ports/head/devel/kyua/pkg-plist?view=markup#l20
 
 ---
 # Possible target as 2016/07/30
+
+- http://portscout.freebsd.org/ports@freebsd.org.html
+- http://portscout.freebsd.org/python@freebsd.org.html
+- http://portscout.freebsd.org/lwhsu@freebsd.org.html
+- https://wiki.freebsd.org/WantedPorts
