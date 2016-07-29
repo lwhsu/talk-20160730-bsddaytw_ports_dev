@@ -6,9 +6,10 @@ class: center, middle
 Li-Wen Hsu &lt;lwhsu@FreeBSD.org&gt;
 
 ---
-![https://lwhsu.github.io/talk-20160730-bsddaytw_ports_dev/](url-qrcode.png)
+class: center, middle
 
-.footnote[https://lwhsu.github.io/talk-20160730-bsddaytw_ports_dev/]
+![https://lwhsu.github.io/talk-20160730-bsddaytw_ports_dev/](url-qrcode.png)
+https://lwhsu.github.io/talk-20160730-bsddaytw_ports_dev/
 
 ---
 # Package management
@@ -36,6 +37,14 @@ https://en.wikipedia.org/wiki/FreeBSD_Ports
 - https://wiki.freebsd.org/pkgng
 - https://github.com/freebsd/pkg
 - https://pkg.FreeBSD.org
+
+---
+class: center, middle
+# Become a Ports Developer!
+
+````sh
+echo DEVELOPER=yes >> /etc/make.conf
+````
 
 ---
 # Porter's Handbook
@@ -74,13 +83,6 @@ README           deskutils/       lang/            security/
 - files/
 - pkg-descr
 - pkg-plist
-
----
-# Become a Ports Developer!
-
-````sh
-echo DEVELOPER=yes >> /etc/make.conf
-````
 
 ---
 # Quick Porting
