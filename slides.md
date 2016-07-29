@@ -129,7 +129,7 @@ COMMENT=        Cat chasing a mouse all over the screen
 ---
 # pkg-descr
 
-```
+```dark
 This is a port of oneko, in which a cat chases a poor mouse all over
 the screen.
  :
@@ -141,7 +141,7 @@ WWW: http://www.oneko.org/
 ---
 # pkg-plist
 
-```
+```dark
 bin/oneko
 man/man1/oneko.1.gz
 lib/X11/app-defaults/Oneko
@@ -162,7 +162,7 @@ lib/X11/oneko/mouse.xpm
 - `make fetch`
 - `make makesum`
 
-```
+```dark
 SHA256 (oneko/oneko-2.0b.tar.gz) = 6d106cd38134be5f5c483affe7fe3b64f8a92955e88097040472571a3f1deb46
 SIZE (oneko/oneko-2.0b.tar.gz) = 86353
 SHA256 (oneko/oneko-2.0b-pop1.1-patch.tar.gz) = 36cedd96d0219fb687fed0c34bbdf375833a3ce0f6d12220427fbc804b315681
