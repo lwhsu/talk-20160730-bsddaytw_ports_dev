@@ -247,9 +247,11 @@ svn diff > port.diff
 - Maintainership takeove
 
 ---
+class: center, middle
 # More complex example
 
-### www/py-django
+---
+# www/py-django
 
 https://svnweb.freebsd.org/ports/head/www/py-django/Makefile?view=markup
 
@@ -257,6 +259,8 @@ https://svnweb.freebsd.org/ports/head/www/py-django/Makefile?view=markup
 - PKGNAMEPREFIX
 - DISTNAME
 - DIST_SUBDIR
+
+- DEPENDS
 
 - CONFLICTS
 
@@ -272,11 +276,33 @@ https://svnweb.freebsd.org/ports/head/www/py-django/Makefile?view=markup
 
 `${PKGNAME}-{PORTVERSION}\_${PORTREVISION},${PORTEPOCH}`
 
+When in doubt, use `pkg version -t`
+
 .footnote[https://www.freebsd.org/doc/en_US.ISO8859-1/books/porters-handbook/makefile-naming.html]
 
 ---
+# *_DEPENDS
+
+https://svnweb.freebsd.org/ports/head/devel/py-jenkins-job-builder/Makefile?revision=418472&view=markup#l16
+
+- EXTRACT_DEPENDS
+- PATCH_DEPENDS
+- FETCH_DEPENDS
+- BUILD_DEPENDS
+- RUN_DEPENDS
+- LIB_DEPENDS
+- TEST_DEPENDS
+
+https://svnweb.freebsd.org/ports/head/Mk/bsd.port.mk?view=markup
+
+"# Dependency checking.  Use these if your port requires another port"
+
+---
+class: center, middle
 # Behind `make all install`
-- Default sequence for `all` target:
+
+---
+# Default sequence for `all`:
 
   * check-sanity
   * fetch
@@ -286,31 +312,10 @@ https://svnweb.freebsd.org/ports/head/www/py-django/Makefile?view=markup
   * configure
   * build
 
-- `install` depends:
+# `install` depends:
   * stage
   * package
   * install
-
----
-# Each standard target
-
-### pre-\* do-\* post-\*
-
-Examples:
-- pre-configure:
-  ```
-  ${CHMOD} +x ${WRKSRC}/configure
-  ```
-- do-install:
-  ```
-  ${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME}.pl \
-	  ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
-  ```
-- post-extract:
-  ```
-  @${FIND} ${WRKSRC} -type f \( -name '*.bak' -or \
-	  -name '*.dll' -or -name '*.exe' \) -delete
-  ```
 
 ---
 # fetch
@@ -372,6 +377,27 @@ https://svnweb.freebsd.org/ports/head/www/lighttpd/Makefile?revision=418900&view
 - TEST_TARGET
 
 ---
+# For Each Standard Target
+
+### pre-\* do-\* post-\*
+
+Examples:
+- pre-configure:
+  ```
+  ${CHMOD} +x ${WRKSRC}/configure
+  ```
+- do-install:
+  ```
+  ${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME}.pl \
+	  ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
+  ```
+- post-extract:
+  ```
+  @${FIND} ${WRKSRC} -type f \( -name '*.bak' -or \
+	  -name '*.dll' -or -name '*.exe' \) -delete
+  ```
+
+---
 # More targets in `bsd.port.mk`
 
 Find "More standard targets start here."
@@ -392,24 +418,9 @@ pre-everything::
 ```
 
 ---
-# *_DEPENDS
-
-https://svnweb.freebsd.org/ports/head/devel/py-jenkins-job-builder/Makefile?revision=418472&view=markup#l16
-
-- EXTRACT_DEPENDS
-- PATCH_DEPENDS
-- FETCH_DEPENDS
-- BUILD_DEPENDS
-- RUN_DEPENDS
-- LIB_DEPENDS
-- TEST_DEPENDS
-
-https://svnweb.freebsd.org/ports/head/Mk/bsd.port.mk?view=markup
-
-"# Dependency checking.  Use these if your port requires another port"
-
----
 # Staging
+
+`${WRKDIR}/stage`
 
 https://svnweb.freebsd.org/ports/head/devel/jenkins/Makefile?revision=419032&view=markup#l49
 
@@ -436,6 +447,7 @@ ports-mgmt/poudriere
   * https://www.freebsd.org/doc/en_US.ISO8859-1/books/porters-handbook/porting-prefix.html
 
 ---
+class: center, middle
 # Advanced topics
 
 ---
@@ -593,7 +605,6 @@ https://svnweb.freebsd.org/ports/head/devel/kyua/pkg-plist?view=markup#l20
 
 - grep -r
 - make -V
-- pkg version -t
 
 ---
 # Utilities
