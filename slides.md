@@ -270,6 +270,8 @@ https://svnweb.freebsd.org/ports/head/www/py-django/Makefile?view=markup
 - PORTREVISION
 - PORTEPOCH
 
+`${PKGNAME}-{PORTVERSION}\_${PORTREVISION},${PORTEPOCH}`
+
 .footnote[https://www.freebsd.org/doc/en_US.ISO8859-1/books/porters-handbook/makefile-naming.html]
 
 ---
