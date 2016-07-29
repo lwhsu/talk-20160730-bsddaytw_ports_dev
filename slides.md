@@ -209,7 +209,7 @@ SIZE (oneko/oneko-2.0b-bsd0.2.tar.gz) = 22029
 
 Do **not** **blindly** follow the output of `portlint`
 
-```
+```sh
 $ cd /usr/ports/devel/jenkins && portlint -abct
 WARN: Makefile: possible use of absolute pathname "/var/log/jenkins.log".
 0 fatal errors and 1 warning found.
