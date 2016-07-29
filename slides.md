@@ -12,6 +12,23 @@ class: center, middle
 https://lwhsu.github.io/talk-20160730-bsddaytw_ports_dev/
 
 ---
+# <lwhsu@FreeBSD.org>
+
+.left-column[
+* 許立文
+* Coder
+* System Administrator
+* Traveler
+* Diver
+* Cyclist
+* Snowborder
+
+
+https://lwhsu.org
+]
+.right-column[![lwhsu@](lwhsu.jpg)]
+
+---
 # Package management
 
 - Install 3rd party softwares
