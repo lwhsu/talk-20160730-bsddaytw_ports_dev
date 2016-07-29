@@ -98,12 +98,12 @@ README           deskutils/       lang/            security/
 ---
 # Quick Porting
 
-- Writing the Makefile
-- Writing the Description Files
-- Creating the Checksum File
-- Testing the Port
-- Checking with portlint
-- Submitting the New Port
+- Write the Makefile
+- Write the Description Files
+- Create the Checksum File
+- Test the Port
+- Check with portlint
+- Submit the New Port
 
 ---
 # Makefile
