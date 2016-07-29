@@ -584,8 +584,8 @@ https://svnweb.freebsd.org/ports/head/devel/kyua/pkg-plist?view=markup#l20
 # Utilities
 
 - ports-mgmt/porttools
+  * `port create`
   * https://github.com/skreuzer/porttools
-  * `port create``
 - ports-mgmt/portlint
 - ports-mgmt/freebsd-bugzilla-cli
 
@@ -636,9 +636,13 @@ https://svnweb.freebsd.org/ports/head/devel/kyua/pkg-plist?view=markup#l20
   * https://svnweb.freebsd.org/ports/head/Mk/bsd.port.mk?view=markup
 
 ---
-# Possible target as 2016/07/30
+# Possible target on 2016-07-30
 
-- http://portscout.freebsd.org/ports@freebsd.org.html
-- http://portscout.freebsd.org/python@freebsd.org.html
-- http://portscout.freebsd.org/lwhsu@freebsd.org.html
-- https://wiki.freebsd.org/WantedPorts
+- Portscout
+  *  http://portscout.freebsd.org/ports@freebsd.org.html
+  *  http://portscout.freebsd.org/python@freebsd.org.html
+  *  http://portscout.freebsd.org/lwhsu@freebsd.org.html
+- Advanced challenge:
+  * https://wiki.freebsd.org/WantedPorts
+- Please include:
+  * `Sponsored by: FreeBSD Day Taiwan`
