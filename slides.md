@@ -235,7 +235,7 @@ WARN: Makefile: possible use of absolute pathname "/var/log/jenkins.log".
 ---
 # Submitting
 
-### Now Port (use shar):
+### New Port (use shar):
 ```
 shar `find oneko` > oneko.shar
 ```
